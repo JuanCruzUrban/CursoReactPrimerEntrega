@@ -1,17 +1,26 @@
 
 import './App.css'
-
+import NavBar from "./components/Navbar/Navbar"
 import Header from './components/Header/Header';
-
+import CardUser from './components/CardUser/CardUser';
 function App() {
   
   return (
     
-      <div>
+      <div className='DivPrincipal'>
         <Header/>
-      <h1>COMPONENTES</h1>
-      </div>
+      <NavBar/>
       
+      
+      <div className='DivSecundario'>
+        <CardUser
+        
+        name="Juan Cruz"
+        
+        
+        />
+      </div>
+      </div>
     
   )
 }
