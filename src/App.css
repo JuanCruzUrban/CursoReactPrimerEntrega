@@ -14,10 +14,3 @@ display: flex;
 flex-direction: column;
 }
 
-.DivSecundario{
-align-items: center;
-        width: 100%;
-    display: flex;
-    flex-direction: column;
-    
-}

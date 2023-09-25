@@ -1,26 +1,18 @@
 
 import './App.css'
 import NavBar from "./components/Navbar/Navbar"
-import Header from './components/Header/Header';
-import CardUser from './components/CardUser/CardUser';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+
+
 function App() {
   
   return (
-    
-      <div className='DivPrincipal'>
-        <Header/>
+    <>
+      <div className='DivPrincipal'>   
       <NavBar/>
-      
-      
-      <div className='DivSecundario'>
-        <CardUser
-        
-        name="Juan Cruz"
-        
-        
-        />
       </div>
-      </div>
+    <ItemListContainer/>
+    </>
     
   )
 }

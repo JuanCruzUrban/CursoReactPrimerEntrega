@@ -1,6 +1,8 @@
 import React from 'react'
 import "./NavBar.css"
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import CartWidget from '../CartWidget/CartWidget'
+
+
 const Navbar = () => {
   return (
     <div className='Navbar'>
@@ -18,7 +20,15 @@ const Navbar = () => {
 <a href="./App.jsx">Producto</a> 
 </li>
 
+<li>
+
+<CartWidget/>
+
+</li>
+
 </ul>
+
+
     </div>
   )
 }
