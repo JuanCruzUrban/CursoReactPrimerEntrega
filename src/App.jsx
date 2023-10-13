@@ -2,6 +2,10 @@
 import './App.css'
 import NavBar from "./components/Navbar/Navbar"
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom" 
+import Home from './pages/Home'
+import Contacto from './pages/Contacto'
+import About from "./pages/About"
 
 
 function App() {
@@ -10,8 +14,16 @@ function App() {
     <>
       <div className='DivPrincipal'>   
       <NavBar/>
-      </div>
-    <ItemListContainer/>
+      <Router>   
+<Routes>
+<Route path='/' element ={<Home/>}/>
+<Route path='/Contacto' element ={<Contacto/>}/>
+<Route path='/About' element ={<About/>}/>
+</Routes>
+</Router>
+   </div>
+    
+ <ItemListContainer/>
     </>
     
   )
