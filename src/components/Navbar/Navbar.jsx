@@ -9,9 +9,9 @@ const Navbar = () => {
  
 <ul>
 
-<Link to={"/"}>Home </Link>
-<Link to = {"/contacto"}>Contacto</Link>
-<Link to = {"/about"}> About </Link>
+<Link to={"/"}> Home </Link>
+<Link to={"/contacto"}>Contacto</Link>
+<Link to={"about"}> About </Link>
 <CartWidget/>
 </ul>
 

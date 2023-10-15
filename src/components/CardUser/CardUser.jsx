@@ -5,7 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const CardUser = (props) =>  {
+const CardUser = (el) =>  {
+
+  const {id, producto, precio, tipo} = el;
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>

@@ -12,18 +12,20 @@ function App() {
   
   return (
     <>
+     <Router>
       <div className='DivPrincipal'>   
       <NavBar/>
-      <Router>   
+        
 <Routes>
 <Route path='/' element ={<Home/>}/>
 <Route path='/Contacto' element ={<Contacto/>}/>
 <Route path='/About' element ={<About/>}/>
 </Routes>
+</div>   
 </Router>
-   </div>
-    
  <ItemListContainer/>
+ 
+
     </>
     
   )
