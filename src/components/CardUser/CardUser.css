@@ -1,0 +1,10 @@
+.divCar h2, h3, p{
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+background-color: white;
+color: black;
+margin-top: 1rem;
+margin-bottom: 1 rem;
+}
