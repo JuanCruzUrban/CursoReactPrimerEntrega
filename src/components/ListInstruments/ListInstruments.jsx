@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react"
 import "./ListInstruments.css"
-
 import CardUser from "../CardUser/CardUser";
-
+import { Link } from "react-router-dom";
 
 const ListInstruments = () => {
   
@@ -21,7 +20,11 @@ fetch("./productos.json").then((res) => res.json() )
  {ins.map((el)=>{
 
 return(
-    <CardUser key = {el.id} el = {el}/>
+<div className="divInstr" key = {el.id}>
+<Link to={`/DetailPage ${el.id}`}>
+<CardUser  el = {el}/>
+</Link>
+</div>
 )
 
 })}             
