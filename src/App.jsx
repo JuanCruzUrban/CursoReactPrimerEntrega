@@ -7,14 +7,17 @@ import Home from './pages/Home'
 import Contacto from './pages/Contacto'
 import About from "./pages/About"
 import DetailPage from "./pages/DetailPage"
+import Header from './components/Header/Header'
 
 function App() {
   
   return (
     <>
-     <Router>
-      <div className='DivPrincipal'>   
-      <NavBar/>
+   
+<Router>
+<Header/>
+<div className='DivPrincipal'>   
+<NavBar/>
         
 <Routes>
 <Route path='/' element ={<Home/>}/>
