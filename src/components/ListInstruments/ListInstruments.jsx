@@ -9,19 +9,19 @@ const ListInstruments = () => {
   
   useEffect (() => {
 
-fetch("./productos.json").then((res) => res.json() )
+fetch("../../../productos.json").then((res) => res.json() )
 .then((datos) => setIns(datos))
 
-  })
+  }),[]
   
     return (
    
-<div>
+<div className="divInstrumento">
  {ins.map((el)=>{
 
 return(
 <div className="divInstr" key = {el.id}>
-<Link to={`/DetailPage ${el.id}`}>
+<Link to={`/DetailPage/${el.id}`}>
 <CardUser  el = {el}/>
 </Link>
 </div>

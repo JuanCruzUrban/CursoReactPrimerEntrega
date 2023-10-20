@@ -1,0 +1,17 @@
+.divInstrumento{
+
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.divInstr{
+
+margin: 1rem;
+display: flex;
+border: solid 1px black;
+
+margin-top: 1rem;
+margin-bottom: 1rem;
+}

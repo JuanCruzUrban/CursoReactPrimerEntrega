@@ -6,9 +6,10 @@ import { useParams } from 'react-router-dom';
 const DetailPage = () => {
   
     let {id} = useParams()
-    
+    console.log(id)
         const [det, setDet] = useState([]);
         
+        console.log(det)
         useEffect (() => {
       
       fetch(`./productos.json/${id}`).then((res) => res.json() )
@@ -20,7 +21,7 @@ const DetailPage = () => {
   
     return (
     <div>
-    {det.id? <CardUser det = {det}/>: null}
+    {det.id ? <CardUser det = {det} />: null}
     </div>
   )
 }
