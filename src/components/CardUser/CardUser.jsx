@@ -9,24 +9,26 @@ import Typography from '@mui/material/Typography';
 
 const CardUser = ({el}) =>  {
 
-  const {id, producto, precio, tipo} = el;
+  const {id, producto, precio, tipo, img} = el;
   
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
+        component="img"
+        height="200"
+        image= {img}
         
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {producto}
+          Producto: {producto}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-         
+        <Typography>
+         Precio:{precio}
         </Typography>
       </CardContent>
       <CardActions>
-        {precio}
-       {tipo}
+        
       </CardActions>
     </Card>
   );

@@ -1,13 +1,13 @@
  [
-    {"id":"1", "producto":"guitarra", "precio": "5000", "tipo": "cuerda"},
-{"id":"2", "producto":"violin", "precio": "6000", "tipo": "cuerda"},
-{"id":"3", "producto":"bajo", "precio": "7000", "tipo": "cuerda"},
-{"id":"4", "producto":"ukelele", "precio": "8000", "tipo": "cuerda"},
-{"id":"5", "producto":"charango", "precio": "9000", "tipo": "cuerda"},
-{"id":"6", "producto":"bateria", "precio": "10000", "tipo": "cuerda"},
-{"id":"7", "producto":"congas", "precio": "11000", "tipo": "percusion"},
-{"id":"8", "producto":"bongo", "precio": "12000", "tipo": "percusion"},
-{"id":"9", "producto":"yembe", "precio": "13000", "tipo": "percusion"},
-{"id":"10", "producto":"timbales", "precio": "14000", "tipo": "percusion"},
-{"id":"11", "producto":"bombo", "precio": "15000", "tipo": "percusion"}
+    {"id":"1", "producto":"guitarra", "precio": "5000", "tipo": "cuerda", "img": "https://www.heavenimagenes.com/heavencommerce/e11e0483-99c8-4ad2-b3a9-bfb26fc81402/images/v2/YAMAHA/0704121327551540_01_medium.jpg"},
+{"id":"2", "producto":"violin", "precio": "6000", "tipo": "cuerda", "img": "https://dcdn.mitiendanube.com/stores/001/055/235/products/violin-natural-1-tn1-3f0397e5e8c59f19a516790540447935-1024-1024.jpg"},
+{"id":"3", "producto":"bajo", "precio": "7000", "tipo": "cuerda", "img": "https://http2.mlstatic.com/D_NQ_NP_619217-MLU70355213766_072023-F.webp"},
+{"id":"4", "producto":"ukelele", "precio": "8000", "tipo": "cuerda", "img": "https://http2.mlstatic.com/D_NQ_NP_789095-MLA45596910360_042021-O.webp"},
+{"id":"5", "producto":"charango", "precio": "9000", "tipo": "cuerda", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Charango_jt.png/250px-Charango_jt.png"},
+{"id":"6", "producto":"bateria", "precio": "10000", "tipo": "cuerda", "img": "https://mla-s1-p.mlstatic.com/656201-MLA69566787427_052023-F.jpg"},
+{"id":"7", "producto":"congas", "precio": "11000", "tipo": "percusion", "img": "https://www.heavenimagenes.com/heavencommerce/442fba24-f11b-4699-8986-ef30a182c02c/images/v2/LATIN%20PERCUSSION/41542_medium.jpg"},
+{"id":"8", "producto":"bongo", "precio": "12000", "tipo": "percusion", "img": "https://ar.xprostore.com/image/cache/data/imagenesweb/tb-8-b-n-650x650.jpg"},
+{"id":"9", "producto":"yembe", "precio": "13000", "tipo": "percusion", "img": " https://www.musiki.org.ar/images/thumb/0/0a/Djembe_cansanello_mariano_i1.jpg/300px-Djembe_cansanello_mariano_i1.jpg"},
+{"id":"10", "producto":"timbales", "precio": "14000", "tipo": "percusion", "img": "https://solomusica.com.ar/sm2020/6306-large_default/timbal-toca-tpt-1415-cobre.jpg"},
+{"id":"11", "producto":"bombo", "precio": "15000", "tipo": "percusion", "img": "https://http2.mlstatic.com/D_NQ_NP_953718-MLA45614749376_042021-O.webp"}
 ]

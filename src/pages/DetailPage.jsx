@@ -4,26 +4,25 @@ import CardUser from '../components/CardUser/CardUser';
 import { useParams } from 'react-router-dom';
 
 const DetailPage = () => {
-  
-    let {id} = useParams()
-    console.log(id)
-        const [det, setDet] = useState([]);
-        
-        console.log(det)
-        useEffect (() => {
-      
-      fetch(`./productos.json/${id}`).then((res) => res.json() )
-      .then((dato) => setDet(dato))
-      
-        }),[id]
-        
-  
-  
-    return (
-    <div>
-    {det.id ? <CardUser det = {det} />: null}
-    </div>
-  )
-}
+  let { id } = useParams();
 
-export default DetailPage
+  const [det, setDet] = useState([]);  
+
+  useEffect(() => {
+    fetch("../../productos.json")
+      .then((res) => res.json())
+      .then((dato) => setTimeout(() => {
+        setDet(dato.filter(prod => prod.id == id)[0])
+      }, 2000));
+  }, [id]);
+
+  return  (
+  
+  <div>{det.id ? <CardUser el={det} /> : null}</div>
+  
+  )
+
+
+};
+
+export default DetailPage;

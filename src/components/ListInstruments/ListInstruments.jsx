@@ -12,7 +12,7 @@ const ListInstruments = () => {
 fetch("../../../productos.json").then((res) => res.json() )
 .then((datos) => setIns(datos))
 
-  }),[]
+  },[] )
   
     return (
    
@@ -21,7 +21,7 @@ fetch("../../../productos.json").then((res) => res.json() )
 
 return(
 <div className="divInstr" key = {el.id}>
-<Link to={`/DetailPage/${el.id}`}>
+<Link to={`/detail/${el.id}`}>
 <CardUser  el = {el}/>
 </Link>
 </div>

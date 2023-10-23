@@ -7,7 +7,7 @@ import Contacto from './pages/Contacto'
 import About from "./pages/About"
 import DetailPage from "./pages/DetailPage"
 import Header from './components/Header/Header'
-
+import Category from './pages/Category'
 function App() {
   
   return (
@@ -23,7 +23,8 @@ function App() {
 <Route path='/' element ={<ItemListContainer/>}/>
 <Route path='/Contacto' element ={<Contacto/>}/>
 <Route path='/About' element ={<About/>}/>
-<Route path='/DetailPage/:id'  element ={<DetailPage/>}/>
+<Route path='/detail/:id'  element ={<DetailPage/>}/>
+<Route path='/category/:categoryId'  element ={<Category/>}/>
 </Routes>
 </div>   
 </Router>

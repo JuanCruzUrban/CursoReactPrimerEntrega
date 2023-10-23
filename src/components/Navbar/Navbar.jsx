@@ -11,7 +11,9 @@ const Navbar = () => {
 
 <Link to={"/"}> Home </Link>
 <Link to={"/contacto"}>Contacto</Link>
-<Link to={"about"}> About </Link>
+<Link to={"/about"}> About </Link>
+<Link to={"/category/cuerda"}> Cuerda </Link>
+<Link to={"/category/percusion"}> Percusion </Link>
 <CartWidget/>
 </ul>
 
