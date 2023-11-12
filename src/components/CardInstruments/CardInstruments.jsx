@@ -6,37 +6,42 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import "./CardInstruments.css"
+const CardInstrument = ({instrument}) =>  {
 
-const CardUser = ({el}) =>  {
-
-  const {id, producto, precio, tipo, img} = el;
+  
   
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <div className='tarjet'>
+    <Card sx={{ maxWidth: 350 }}>
       <CardMedia
         component="img"
-        height="200"
-        image= {img}
+        height="450"
+        image= {instrument.img}
         
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Producto: {producto}
+         Nombre: {instrument.name}
         </Typography>
         <Typography>
-         Precio:{precio}
+          Precio: ${instrument.price}
         </Typography>
       </CardContent>
+      <Typography>
+        Tipo: {instrument.type}
+        </Typography>
       <CardActions>
         
       </CardActions>
     </Card>
+    </div>
   );
 }
 
 
 
-export default CardUser
+export default CardInstrument
 
 
 

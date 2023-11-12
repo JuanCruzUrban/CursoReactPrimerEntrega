@@ -1,12 +1,10 @@
 
 
+    .contenedorTarjetas{
 
-.itemListContainer {
-width: 100%;
-display: flex;
-margin-top: 1rem;
-margin-bottom: 1rem;
-flex-direction: column;
-align-items: center;
-justify-content: center;
- }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem;
+    
+    }
+ 
