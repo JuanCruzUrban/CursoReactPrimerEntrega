@@ -1,16 +1,40 @@
 import React from 'react'
+import CardInstrument from '../components/CardInstruments/CardInstruments';  
 import { useState, useEffect } from 'react';
-import CardUser from '../components/CardInstruments/CardInstruments';
-import { useParams } from 'react-router-dom';
-
+  import { useParams } from 'react-router-dom';
+ import {collection, query, getDocs, where, documentId} from "firebase/firestore"
+ import {db} from "../firebase/firebaseConfig"
+import "../pages/pages.css"
 const DetailPage = () => {
   
+  const [instrument, setInstrument] = useState([])
+
+  const {id} = useParams()
+
+  useEffect(() => {
+    const getInstrumentos = async () => {
+      const q = query(collection(db, "instrumentos"), where(documentId(), "==", id));
+     const docs = []
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+         docs.push({...doc.data(), id: doc.id})
+      });
+      setInstrument(docs)
+    };
+    getInstrumentos();
+  }, []);
 
   return  (
   
-  <div>
-    <h1>detail</h1>
-  </div>
+  <div className='pagesStyle'>
+   {instrument.map((ins)=>{
+
+return (
+<CardInstrument instrument={ins} key={ins.id}/>
+
+)
+   })}
+</div>
   
   )
 
