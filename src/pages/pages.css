@@ -6,3 +6,15 @@ flex-direction: column;
 justify-content: center;
 border: 1px solid black;
 }
+
+
+footer{
+    height: 5rem;
+    display: flex;
+}
+
+.ulFooter a{
+
+    font-size: 2rem;
+
+}

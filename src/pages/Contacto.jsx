@@ -1,8 +1,14 @@
 import React from 'react'
 
+
 const Contacto = () => {
   return (
-    <div>Contacto</div>
+    <>
+    
+    <div >
+   <h2>SOY CONTACTO</h2>
+    </div>
+    </>
   )
 }
 

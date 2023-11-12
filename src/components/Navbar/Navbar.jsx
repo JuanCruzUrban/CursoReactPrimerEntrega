@@ -10,8 +10,6 @@ const Navbar = () => {
 <ul>
 
 <Link to={"/"}> Home </Link>
-<Link to={"/contacto"}>Contacto</Link>
-<Link to={"/about"}> About </Link>
 <Link to={"/cord"}> Cuerda </Link>
 <Link to={"/percussion"}> Percusion </Link>
 
