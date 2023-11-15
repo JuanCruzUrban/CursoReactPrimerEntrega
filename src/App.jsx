@@ -7,7 +7,7 @@ import DetailPage from "./pages/DetailPage";
 import Header from "./components/Header/Header";
 import Percussion from "./pages/Percussion";
 import Cord from "./pages/Cord";
-import Footer from"./components/Footer/Footer"
+import Formulario from "./components/Formulario/Formulario";
 const App = () => {
   
 
@@ -23,8 +23,10 @@ const App = () => {
            <Route path="/percussion" element={<Percussion />} /> 
            <Route path="/cord" element={<Cord/>} />
            <Route path="/Contacto" element={<Contacto/>} />
+           <Route path="/Formulario" element={<Formulario/>} />
+
           </Routes>
-          <Footer/>
+          
           </div>
     
       </Router>

@@ -1,10 +1,10 @@
 import React from 'react'
-import CardInstrument from '../components/CardInstruments/CardInstruments';  
 import { useState, useEffect } from 'react';
   import { useParams } from 'react-router-dom';
  import {collection, query, getDocs, where, documentId} from "firebase/firestore"
  import {db} from "../firebase/firebaseConfig"
 import "../pages/pages.css"
+import CardInstrumentInfo from '../components/CardInstrumentInfo/CardInstrumentInfo';
 const DetailPage = () => {
   
   const [instrument, setInstrument] = useState([])
@@ -30,7 +30,7 @@ const DetailPage = () => {
    {instrument.map((ins)=>{
 
 return (
-<CardInstrument instrument={ins} key={ins.id}/>
+<CardInstrumentInfo instrument={ins} key={ins.id}/>
 
 )
    })}

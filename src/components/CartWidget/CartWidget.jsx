@@ -1,14 +1,16 @@
-import React from 'react'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import React from "react";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
-    <div className='cartWidDiv'>
+    <div className="cartWidDiv">
+      <Link to={"/Formulario"}>
         <ShoppingCartIcon />
         <p>0</p>
-        </div>
-  )
-}
+      </Link>
+    </div>
+  );
+};
 
-export default CartWidget
+export default CartWidget;
