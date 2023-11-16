@@ -1,8 +1,4 @@
 import React from 'react'
-import CardUser from '../components/CardInstruments/CardInstruments';
-import { useParams } from 'react-router-dom';
-import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
-import { Link } from 'react-router-dom'
 import CardInstrument from '../components/CardInstruments/CardInstruments';
 import { collection, query, getDocs, where } from "firebase/firestore";
 import { useEffect, useState } from "react";

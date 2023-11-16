@@ -2,12 +2,11 @@ import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Contacto from "./pages/Contacto";
 import DetailPage from "./pages/DetailPage";
 import Header from "./components/Header/Header";
 import Percussion from "./pages/Percussion";
 import Cord from "./pages/Cord";
-import Formulario from "./components/Formulario/Formulario";
+import ShopPage from "./components/ShopPage/ShopPage";
 const App = () => {
   
 
@@ -22,8 +21,7 @@ const App = () => {
             <Route path="/detail/:id" element={<DetailPage />} />
            <Route path="/percussion" element={<Percussion />} /> 
            <Route path="/cord" element={<Cord/>} />
-           <Route path="/Contacto" element={<Contacto/>} />
-           <Route path="/Formulario" element={<Formulario/>} />
+           <Route path="/shoppage" element={<ShopPage/>} />
 
           </Routes>
           

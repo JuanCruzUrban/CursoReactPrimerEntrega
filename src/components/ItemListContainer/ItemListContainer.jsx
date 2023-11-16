@@ -1,43 +1,38 @@
-import React from 'react'
-import "./ItemListContainer.css"
+import React from "react";
+import "./ItemListContainer.css";
 import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import CardInstrument from "../CardInstruments/CardInstruments"
-import { Link } from 'react-router-dom';
-
+import CardInstrument from "../CardInstruments/CardInstruments";
+import { Link } from "react-router-dom";
 
 const ItemListContainer = () => {
-  
   const [instruments, setInstruments] = useState([]);
 
   useEffect(() => {
     const getInstrumentos = async () => {
       const q = query(collection(db, "instrumentos"));
-     const docs = []
+      const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-         docs.push({...doc.data(), id: doc.id})
+        docs.push({ ...doc.data(), id: doc.id });
       });
-      setInstruments(docs)
+      setInstruments(docs);
     };
     getInstrumentos();
   }, []);
-  
-  
+
   return (
     <div className="contenedorTarjetas">
-          {instruments.map((instrument) => {
+      {instruments.map((instrument) => {
+        return (
+          <Link to={`/detail/${instrument.id}`} key={instrument.id}>
+            <CardInstrument instrument={instrument} />
+          </Link>
+        );
+      })}
+    </div>
+  );
+};
 
-return(
-  <Link to= {`/detail/${instrument.id}`} key={instrument.id}>
-<CardInstrument instrument={instrument}/>
-</Link>
-)
-
-          })}
-        </div>
-  )
-}
-
-export default ItemListContainer
+export default ItemListContainer;
