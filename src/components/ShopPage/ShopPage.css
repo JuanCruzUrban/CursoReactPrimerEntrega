@@ -1,24 +1,28 @@
-.Shopcar{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-margin-top: 3rem;
+.Shopcar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
 }
 
-.ShopForm{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 4rem;
-height: auto;
-width: auto;
+.ShopForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
 }
 
-.MuiFormControl-root, MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+.textF {
+    height: 5rem;
+    width: 30rem;
+}
 
-width: 20rem;
+button {
 
+    height: 2rem;
+    width: 4rem;
+    border-radius: 3px;
 }
