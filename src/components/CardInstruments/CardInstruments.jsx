@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 const CardInstrument = ({ instrument }) => {
   return (
     <div className="tarjet">
-      <Card sx={{ maxWidth: 350 }}>
-        <CardMedia component="img" height="450" image={instrument.img} />
+      <Card sx={{ maxWidth: 340 }}>
+        <CardMedia component="img" height="350" image={instrument.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Nombre: {instrument.name}
@@ -24,8 +24,8 @@ const CardInstrument = ({ instrument }) => {
         <button className="buttonCard">Ver mas</button>
         </Link>
         <div className="btnAgregarSacar">
-        <button>Sumar al carrito</button>
-        <button>Restar del carrito</button>
+        <button>+</button>
+        <button>-</button>
         </div>
     </div>
   );
