@@ -26,9 +26,9 @@ const ItemListContainer = () => {
     <div className="contenedorTarjetas">
       {instruments.map((instrument) => {
         return (
-          <Link to={`/detail/${instrument.id}`} key={instrument.id}>
-            <CardInstrument instrument={instrument} />
-          </Link>
+          
+            <CardInstrument instrument={instrument} key={instrument.id}/>
+          
         );
       })}
     </div>

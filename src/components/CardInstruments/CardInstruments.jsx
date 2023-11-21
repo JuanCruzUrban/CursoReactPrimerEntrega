@@ -3,9 +3,9 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "./CardInstruments.css";
+import { Link } from "react-router-dom";
 
 const CardInstrument = ({ instrument }) => {
   return (
@@ -19,8 +19,14 @@ const CardInstrument = ({ instrument }) => {
           <Typography>Precio: ${instrument.price}</Typography>
         </CardContent>
         <Typography>Tipo: {instrument.type}</Typography>
-        <CardActions></CardActions>
       </Card>
+      <Link className="linkCard" to={`/detail/${instrument.id}`} key={instrument.id}>
+        <button className="buttonCard">Ver mas</button>
+        </Link>
+        <div className="btnAgregarSacar">
+        <button>Sumar al carrito</button>
+        <button>Restar del carrito</button>
+        </div>
     </div>
   );
 };
