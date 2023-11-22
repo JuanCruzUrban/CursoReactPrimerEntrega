@@ -28,18 +28,5 @@ background-color: white;
 width: 4rem;
 }
 
-.btnAgregarSacar{
-width: 15rem;
-    display: flex;
-margin-bottom: 1rem;
 
-}
 
-.btnAgregarSacar button{
-margin: 2rem;
-height: 3rem;
-width: 50px;
-border: 2px solid black;
-cursor: pointer;
-font-size: 2rem;
-}

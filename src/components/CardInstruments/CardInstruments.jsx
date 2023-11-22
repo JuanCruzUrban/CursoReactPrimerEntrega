@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./CardInstruments.css";
 import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 
 const CardInstrument = ({ instrument }) => {
   return (
@@ -23,10 +24,9 @@ const CardInstrument = ({ instrument }) => {
       <Link className="linkCard" to={`/detail/${instrument.id}`} key={instrument.id}>
         <button className="buttonCard">Ver mas</button>
         </Link>
-        <div className="btnAgregarSacar">
-        <button>+</button>
-        <button>-</button>
-        </div>
+        {/* <div className="btnAgregarSacar"> */}
+        <ItemCount/>
+        {/* </div> */}
     </div>
   );
 };

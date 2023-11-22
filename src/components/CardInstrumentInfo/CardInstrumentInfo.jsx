@@ -7,11 +7,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "../CardInstrumentInfo/CardInstrumentInfo.css";
 import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 const CardInstrumentInfo = ({ instrument }) => {
   return (
     <div className="tarjet">
       <Card sx={{ maxWidth: 340 }}>
-        <CardMedia component="img" height="350" image={instrument.img} />
+        <CardMedia component="img" height="450" image={instrument.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Nombre: {instrument.name}
@@ -30,10 +31,11 @@ const CardInstrumentInfo = ({ instrument }) => {
         <Link className="linkCard" to = {`/`} key={instrument.id}>
         <button className="buttonCard">Home</button>
         </Link>
-        <div className="btnAgregarSacar">
+        {/* <div className="btnAgregarSacar">
         <button>+</button>
         <button>-</button>
-        </div>
+        </div> */}
+        <ItemCount/>
     </div>
   );
 };
