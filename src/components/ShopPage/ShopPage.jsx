@@ -6,6 +6,8 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebaseConfig";
 import "../MessageSucess/MessageSucess"
 import MessageSucess from "../MessageSucess/MessageSucess";
+import { ItemsContext } from "../../context/ItemsContext";
+import { useContext } from "react";
 
 const initialState = {
   name: "",
@@ -14,6 +16,9 @@ const initialState = {
 };
 
 const ShopPage = () => {
+  
+  const { carrito, precioTotal, vaciarCarrito } = useContext(ItemsContext)
+  const handleVaciarCarrito = vaciarCarrito()
   const [values, setValues] = useState(initialState);
 
   const [purchaseID, serPurchaseID] = useState();
@@ -34,8 +39,26 @@ const ShopPage = () => {
   };
 
   return (
-    <div className="Shopcar">
+    <>
+     <div>
       <h1>ShopPage</h1>
+      
+        {carrito.map((prod) => (
+          <div>
+            <h3>{prod.name}</h3>
+            <p>Precio unitario: {prod.price}</p>
+            <p>Precio total: {prod.price * prod.cantidad}</p>
+            <p>Cantidad: {prod.cantidad}</p>
+          </div>
+            
+        ))
+        }
+        <h2>Precio total: $ {precioTotal()}</h2>
+        <button onClick={handleVaciarCarrito}>Vaciar Carrito</button>
+      </div> 
+      
+      
+      <div className="Shopcar">
       <form className="ShopForm" onSubmit={handleOnSubmit}>
         <TextField
           className="textF"
@@ -65,6 +88,7 @@ const ShopPage = () => {
       </form>
       {purchaseID && <MessageSucess purchaseID={purchaseID}/>}
     </div>
+    </>
   );
 };
 

@@ -12,11 +12,23 @@ import { useState } from "react";
 
 const App = () => {
   const [carrito, setCarrito] = useState([]);
-const productosEnCarro = []
+  const cantidadEnCarrito = () => {
+
+    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
+  
+  }
+
+  const precioTotal = () =>{
+
+    return carrito.reduce((acc, prod)=> acc + prod.price * prod.cantidad, 0 )
+
+  }
+
+  const vaciarCarrito = () =>{ setCarrito([])}
 
   return (
     <>
-    <ItemsContext.Provider value={productosEnCarro}>
+    <ItemsContext.Provider value={{carrito, setCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito}}>
       <Router>
         <Header />
         <NavBar />

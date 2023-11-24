@@ -21,12 +21,15 @@ const CardInstrument = ({ instrument }) => {
         </CardContent>
         <Typography>Tipo: {instrument.type}</Typography>
       </Card>
-      <Link className="linkCard" to={`/detail/${instrument.id}`} key={instrument.id}>
+      <Link
+        className="linkCard"
+        to={`/detail/${instrument.id}`}
+        key={instrument.id}
+      >
         <button className="buttonCard">Ver mas</button>
-        </Link>
-        {/* <div className="btnAgregarSacar"> */}
-        <ItemCount/>
-        {/* </div> */}
+      </Link>
+
+      <ItemCount instrument={instrument} />
     </div>
   );
 };
