@@ -31,10 +31,6 @@ const CardInstrumentInfo = ({ instrument }) => {
         <Link className="linkCard" to = {`/`} key={instrument.id}>
         <button className="buttonCard">Home</button>
         </Link>
-        {/* <div className="btnAgregarSacar">
-        <button>+</button>
-        <button>-</button>
-        </div> */}
         <ItemCount/>
     </div>
   );

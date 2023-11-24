@@ -7,28 +7,13 @@ import Header from "./components/Header/Header";
 import Percussion from "./pages/Percussion";
 import Cord from "./pages/Cord";
 import ShopPage from "./components/ShopPage/ShopPage";
-import { ItemsContext } from "./context/ItemsContext";
-import { useState } from "react";
+import { CartContextProvider} from "./context/ItemsContext";
 
 const App = () => {
-  const [carrito, setCarrito] = useState([]);
-  const cantidadEnCarrito = () => {
-
-    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
-  
-  }
-
-  const precioTotal = () =>{
-
-    return carrito.reduce((acc, prod)=> acc + prod.price * prod.cantidad, 0 )
-
-  }
-
-  const vaciarCarrito = () =>{ setCarrito([])}
-
+ 
   return (
     <>
-    <ItemsContext.Provider value={{carrito, setCarrito, cantidadEnCarrito, precioTotal, vaciarCarrito}}>
+    <CartContextProvider.Provider>
       <Router>
         <Header />
         <NavBar />
@@ -43,7 +28,7 @@ const App = () => {
           </Routes>
         </div>
       </Router>
-      </ItemsContext.Provider>
+      </CartContextProvider.Provider>
     </>
   );
 };
