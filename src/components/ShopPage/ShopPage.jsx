@@ -12,7 +12,7 @@ import { useContext } from "react";
 const initialState = {
   name: "",
   lastName: "",
-  city: "",
+  email: "",
 };
 
 const ShopPage = () => {
@@ -82,9 +82,9 @@ const ShopPage = () => {
           />
           <TextField
             className="textF"
-            placeholder="City"
-            name="city"
-            value={values.city}
+            placeholder="Email"
+            name="email"
+            value={values.email}
             onChange={handleOnChange}
             required
           />
