@@ -4,7 +4,6 @@ import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs, where } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import CardInstrument from "../CardInstruments/CardInstruments";
-import { Link } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [instruments, setInstruments] = useState([]);

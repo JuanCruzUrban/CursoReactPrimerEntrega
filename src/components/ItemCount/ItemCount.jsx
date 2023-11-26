@@ -1,13 +1,28 @@
-import { useContext, useState } from "react";
 import "./ItemCount.css";
+import { useItemContext } from "../../context/ItemsContext";
 import React from "react";
-import { ItemsContext } from "../../context/ItemsContext";
 
-const ItemCount = () => {
- const { carrito, setCarrito } = useContext(ItemsContext);
+const ItemCount = ({instrument}) => {
 
-  
-  
+  const {handleSumar,handleRestar,carrito,setCarrito,cantidad} = useItemContext()
+
+  const handleAgregar = () => {
+    const itemAgregado = { ...instrument, cantidad };
+    const nuevoCarrito = [...carrito];
+    const estaEnCarro = nuevoCarrito.find(
+      (producto) => producto.id === itemAgregado.id
+    );
+
+    if (estaEnCarro) {
+      estaEnCarro.cantidad += cantidad;
+      
+    } else {
+      nuevoCarrito.push(itemAgregado);
+      
+    }
+    setCarrito(nuevoCarrito);
+  };
+
   return (
     <div className="btnAgregarAlCarro">
       <div className="btnAgregarSacar">
